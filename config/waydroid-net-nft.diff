@@ -1,0 +1,11 @@
+--- /usr/lib/waydroid/data/scripts/waydroid-net.sh.orig
++++ /usr/lib/waydroid/data/scripts/waydroid-net.sh
+@@ -25,7 +25,7 @@
+ LXC_DHCP_CONFILE=""
+ LXC_DHCP_PING="true"
+ LXC_DOMAIN=""
+-LXC_USE_NFT="false"
++LXC_USE_NFT="true"
+
+ LXC_IPV6_ADDR=""
+ LXC_IPV6_MASK=""

@@ -1,0 +1,1 @@
+/swapfile-waydroid none swap sw,pri=5 0 0

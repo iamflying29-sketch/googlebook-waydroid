@@ -1,0 +1,12 @@
+#!/bin/bash
+# Show the Waydroid window, starting Android first if needed.
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+export WAYLAND_DISPLAY="${WAYLAND_DISPLAY:-wayland-0}"
+
+# Already open? Don't stack a second window.
+if pgrep -u "$(id -u)" -f '^/usr/bin/python3 /usr/bin/waydroid show-full-ui' >/dev/null; then
+    exit 0
+fi
+
+sudo -n systemctl start waydroid-container
+exec waydroid show-full-ui
